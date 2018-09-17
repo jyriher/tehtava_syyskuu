@@ -9,11 +9,14 @@ const bluebox1text = document.querySelector('#bluebox1text');
 const greenbox2text = document.querySelector('#greenbox2text');
 const bluebox2text = document.querySelector('#bluebox2text');
 const orangeboxtext = document.querySelector('#orangeboxtext');
-//const proxyosoite = 'http://users.metropolia.fi/~jyriher/tehtava_paivitys.json/proxy.php?url=';
+
+const proxyosoite = 'https://cors-anywhere.herokuapp.com/'
+const arrowButton = document.querySelector('#arrowButton');
+const container = document.querySelector('#container');
 
 const getText = () => {
 
-    fetch('http://users.metropolia.fi/~jyriher/tehtava_paivitys.json')
+    fetch(proxyosoite + 'http://users.metropolia.fi/~jyriher/tehtava_paivitys.json')
         .then((response) => {
             return response.json();
         })
@@ -38,8 +41,12 @@ const getText = () => {
 
             bluebox2text.innerHTML = result.boxes.bluebox2;
             orangeboxtext.innerHTML = result.boxes.orangebox;
-            
+
         });
 }
+
+arrowButton.addEventListener('click', () => {
+    info2.style.display = 'none';
+});
 
 getText();
