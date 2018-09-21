@@ -34,6 +34,14 @@ body {
     font-size: 14px;
     color: #545454;
 }
+#four {
+    font-size: 14px;
+    color: #545454;
+}
+#five {
+    font-size: 14px;
+    color: #545454;
+}
 #arrowButton {
     font-size: 50px;
     color: #60BD3C;
@@ -167,4 +175,33 @@ body {
     height: 5em;
     background: #DF5B22;
     margin-top: 1.5em;
+}
+#leftInfo {
+    display: none;
+}
+#leftColumn {
+    display: none;
+    flex-wrap: wrap;
+    width: 24em;
+}
+#leftColumn2 {
+    display: none;
+    flex-wrap: wrap;
+    width: 12em;
+    background: #545454;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+    margin-right: 1.5em;
+}
+#leftColumn3 {
+    display: none;
+    flex-wrap: wrap;
+    width: 22em;
+}
+#titleGrey {
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
 }
