@@ -20,6 +20,31 @@ const leftInfo = document.querySelector('#leftInfo');
 const leftColumn = document.querySelector('#leftColumn');
 const leftColumn2 = document.querySelector('#leftColumn2');
 const leftColumn3 = document.querySelector('#leftColumn3');
+const lineColumns = document.querySelector('#lineColumns');
+const lineColumns2 = document.querySelector('#lineColumns2');
+const fillColumns = document.querySelector('#fillColumns');
+const textColumns = document.querySelector('#textColumns');
+const dragColumns = document.querySelector('#dragColumns');
+
+const firstText = document.querySelector('#firstText');
+const secondText = document.querySelector('#secondText');
+const secondText2 = document.querySelector('#secondText2');
+const secondText3 = document.querySelector('#secondText3');
+const thirdText = document.querySelector('#thirdText');
+const fourthText = document.querySelector('#fourthText');
+const fillText1 = document.querySelector('#fillText1');
+const fillText2 = document.querySelector('#fillText2');
+const fillText3 = document.querySelector('#fillText3');
+const fillText4 = document.querySelector('#fillText4');
+const fill1 = document.querySelector('.fill1');
+const fill2 = document.querySelector('.fill2');
+const fill3 = document.querySelector('.fill3');
+const fill4 = document.querySelector('.fill4');
+const empties = document.querySelectorAll('.empty');
+const dragColumn1 = document.querySelector('.dragColumn1');
+const dragColumn2 = document.querySelector('.dragColumn2');
+const dragColumn3 = document.querySelector('.dragColumn3');
+const dragColumn4 = document.querySelector('.dragColumn4');
 
 const getText = () => {
 
@@ -56,24 +81,94 @@ arrowButton.addEventListener('click', () => {
     info2.style.display = 'none';
     arrowButton.style.display = 'none';
     three.style.display = 'none';
-   // four.style.width = '36%';
+    // four.style.width = '36%';
     leftInfo.style.display = 'flex';
     leftColumn.style.display = 'block';
     leftColumn2.style.display = 'block';
     leftColumn3.style.display = 'block';
- //   leftColumn2.style.background = 'blue';
+    //   leftColumn2.style.background = 'blue';
     info.style.width = '56em';
-    
+    lineColumns.style.display = 'flex';
+    lineColumns2.style.display = 'flex';
+    fillColumns.style.display = 'flex';
+    textColumns.style.display = 'flex';
+    dragColumns.style.display = 'flex';
+
     fetch(proxyosoite + 'http://users.metropolia.fi/~jyriher/tehtava_paivitys.json')
-    .then((response) => {
-        return response.json();
-    })
-    .then((result) => {
-        four.innerHTML = result.instructions.help[0];
-        five.innerHTML = result.instructions.help[1];
-        titleGrey.innerHTML = result.instructions.chart;
-       // console.log(result.instructions.help[0]);
-    });
+        .then((response) => {
+            return response.json();
+        })
+        .then((result) => {
+            four.innerHTML = result.instructions.help[0];
+            five.innerHTML = result.instructions.help[1];
+            titleGrey.innerHTML = result.instructions.chart;
+            firstText.innerHTML = result.allquestions.drag.content;
+            secondText.innerHTML = result.drag2.content['#text']['0'];
+            secondText2.innerHTML = result.drag2.content.font['#text'];
+            secondText3.innerHTML = result.drag2.content['#text']['1'];
+            thirdText.innerHTML = result.drag3.content;
+            fourthText.innerHTML = result.drag4.content;
+            fillText1.innerHTML = result.allquestions.drag.header;
+            fillText3.innerHTML = result.drag3.header;
+            fillText4.innerHTML = result.drag4.header;
+            fillText2.innerHTML = result.drag2.header;
+            // console.log(result.instructions.help[0]);
+        });
 });
+
+const dragStart = () => {
+    console.log('start');
+}
+
+const dragEnd = (ev) => {
+    console.log('end');
+
+    if (fill1.parentElement.id == 1) {
+        fill1.style.display = 'block';
+        console.log('tämä on 1');
+        fill1.setAttribute('draggable', false);
+
+    } else {
+        console.log('Tämä ei ole 1');
+        dragColumn1.appendChild(ev.target);
+
+    }
+
+    if (ev.dataTransfer.dropEffect == 'none') {
+        fill1.style.display = 'block';
+
+    }
+}
+
+const dragOver = (e) => {
+    e.preventDefault();
+
+}
+
+const dragEnter = (e) => {
+    e.preventDefault();
+
+}
+
+const dragLeave = () => {
+    fill1.style.display = 'none';
+}
+
+function dragDrop() {
+    empty.classList.add('empty');
+    fill1.style.display = 'block';
+    this.append(fill1);
+}
+
+
+fill1.addEventListener('dragstart', dragStart);
+fill1.addEventListener('dragend', dragEnd);
+
+for (empty of empties) {
+    empty.addEventListener('dragover', dragOver);
+    empty.addEventListener('dragenter', dragEnter);
+    empty.addEventListener('dragleave', dragLeave);
+    empty.addEventListener('drop', dragDrop);
+}
 
 getText();
