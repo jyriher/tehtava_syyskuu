@@ -379,12 +379,13 @@ body {
     margin-left: 2.5em;
     margin-right: 2.5em;
 }
-.dragColumn1 {
+.dragColumn {
     width: 13.5em;
     background: #e5e5e5;
     margin-right: 1em; 
     border-bottom-left-radius: 20px;
 }
+/*
 .dragColumn2 {
     width: 13.5em;
     background: #e5e5e5;
@@ -401,13 +402,14 @@ body {
     background: #e5e5e5;
     margin-right: 1em;
     border-bottom-left-radius: 20px;
-}
-.fill1 {
+} */
+.fill {
     background: #78ce4d;
     height: 3.5em;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
+/*
 .fill2 {
     background: #78ce4d;
     height: 3.5em;
@@ -425,7 +427,7 @@ body {
     height: 3.5em;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
-}
+} */
 #fillText1 {
     font-size: 14px;
     color: #fff;
@@ -452,5 +454,5 @@ body {
     color: #fff;
     text-align: center;
     margin: 0;
-    line-height: 3.5em;
+    line-height: 2em;
 }

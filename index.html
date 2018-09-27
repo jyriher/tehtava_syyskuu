@@ -39,16 +39,16 @@
             </div>
             <div id="fillColumns">
                 <div id="fillColumn1">
-                    <div class="empty" id="1"></div>
+                    <div class="empty" id="1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                 </div>
                 <div id="fillColumn2">
-                    <div class="empty" id="2"></div>
+                    <div class="empty" id="7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                 </div>
                 <div id="fillColumn3">
-                    <div class="empty" id="3"></div>
+                    <div class="empty" id="3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                 </div>
-                <div id="fillColumn4" id="4">
-                    <div class="empty"></div>
+                <div id="fillColumn4">
+                    <div class="empty" id="5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                 </div>
             </div>
             <div id="textColumns">
@@ -69,23 +69,23 @@
             </div>
 
             <div id="dragColumns">
-                <div class="dragColumn1">
-                    <div class="fill1" draggable="true">
+                <div class="dragColumn" id="A">
+                    <div class="fill" id="2" ondragstart="drag(event)">
                         <p id="fillText1"></p>
                     </div>
                 </div>
-                <div class="dragColumn3">
-                    <div class="fill3" draggable="true">
+                <div class="dragColumn" id="B">
+                    <div class="fill" id="4" ondragstart="drag(event)">
                         <p id="fillText3"></p>
                     </div>
                 </div>
-                <div class="dragColumn4">
-                    <div class="fill4" draggable="true">
+                <div class="dragColumn" id="C">
+                    <div class="fill" id="6" ondragstart="drag(event)">
                         <p id="fillText4"></p>
                     </div>
                 </div>
-                <div class="dragColumn2">
-                    <div class="fill2" draggable="true">
+                <div class="dragColumn" id="D">
+                    <div class="fill"  id="8" ondragstart="drag(event)">
                         <p id="fillText2"></p>
                     </div>
                 </div>
@@ -132,5 +132,6 @@
 </body>
 
 <script src="tehtava.js"></script>
+<script src="dragdrop.js"></script>
 
 </html>

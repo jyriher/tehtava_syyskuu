@@ -41,10 +41,7 @@ const fill2 = document.querySelector('.fill2');
 const fill3 = document.querySelector('.fill3');
 const fill4 = document.querySelector('.fill4');
 const empties = document.querySelectorAll('.empty');
-const dragColumn1 = document.querySelector('.dragColumn1');
-const dragColumn2 = document.querySelector('.dragColumn2');
-const dragColumn3 = document.querySelector('.dragColumn3');
-const dragColumn4 = document.querySelector('.dragColumn4');
+
 
 const getText = () => {
 
@@ -116,59 +113,6 @@ arrowButton.addEventListener('click', () => {
         });
 });
 
-const dragStart = () => {
-    console.log('start');
-}
 
-const dragEnd = (ev) => {
-    console.log('end');
-
-    if (fill1.parentElement.id == 1) {
-        fill1.style.display = 'block';
-        console.log('tämä on 1');
-        fill1.setAttribute('draggable', false);
-
-    } else {
-        console.log('Tämä ei ole 1');
-        dragColumn1.appendChild(ev.target);
-
-    }
-
-    if (ev.dataTransfer.dropEffect == 'none') {
-        fill1.style.display = 'block';
-
-    }
-}
-
-const dragOver = (e) => {
-    e.preventDefault();
-
-}
-
-const dragEnter = (e) => {
-    e.preventDefault();
-
-}
-
-const dragLeave = () => {
-    fill1.style.display = 'none';
-}
-
-function dragDrop() {
-    empty.classList.add('empty');
-    fill1.style.display = 'block';
-    this.append(fill1);
-}
-
-
-fill1.addEventListener('dragstart', dragStart);
-fill1.addEventListener('dragend', dragEnd);
-
-for (empty of empties) {
-    empty.addEventListener('dragover', dragOver);
-    empty.addEventListener('dragenter', dragEnter);
-    empty.addEventListener('dragleave', dragLeave);
-    empty.addEventListener('drop', dragDrop);
-}
 
 getText();
