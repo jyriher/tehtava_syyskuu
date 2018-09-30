@@ -13,7 +13,7 @@ const greenbox2text = document.querySelector('#greenbox2text');
 const bluebox2text = document.querySelector('#bluebox2text');
 const orangeboxtext = document.querySelector('#orangeboxtext');
 
-const proxyosoite = 'https://cors-anywhere.herokuapp.com/'
+const proxyosoite = 'https://cors-anywhere.herokuapp.com/';
 const arrowButton = document.querySelector('#arrowButton');
 const container = document.querySelector('#container');
 const leftInfo = document.querySelector('#leftInfo');

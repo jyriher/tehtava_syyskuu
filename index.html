@@ -12,85 +12,117 @@
             <p id="one"></p>
             <p id="two"></p>
             <p id="three"></p>
-            <div id="leftInfo">
-                <div id="leftColumn">
-                    <p id="four"></p>
-                </div>
-                <div id="leftColumn2">
-                    <p id="titleGrey"></p>
-                </div>
-                <div id="leftColumn3">
-                    <p id="five"></p>
-                </div>
-            </div>
-            <div id="lineColumns">
-                <div id="lineColumn1"></div>
-                <div id="lineColumn2"></div>
-            </div>
-            <div id="lineColumns2">
-                <div id="lineColumn3"></div>
-                <div id="lineColumn4"></div>
-                <div id="lineColumn5"></div>
-                <div id="lineColumn6"></div>
-                <div id="lineColumn7"></div>
-                <div id="lineColumn8"></div>
-                <div id="lineColumn9"></div>
-                <div id="lineColumn10"></div>
-            </div>
-            <div id="fillColumns">
-                <div id="fillColumn1">
-                    <div class="empty" id="1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                </div>
-                <div id="fillColumn2">
-                    <div class="empty" id="7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                </div>
-                <div id="fillColumn3">
-                    <div class="empty" id="3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                </div>
-                <div id="fillColumn4">
-                    <div class="empty" id="5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                </div>
-            </div>
-            <div id="textColumns">
-                <div id="textColumn1">
-                    <p id="firstText"></p>
-                </div>
-                <div id="textColumn2">
-                    <p id="secondText"></p>
-                    <p id="secondText2"></p>
-                    <p id="secondText3"></p>
-                </div>
-                <div id="textColumn3">
-                    <p id="thirdText"></p>
-                </div>
-                <div id="textColumn4">
-                    <p id="fourthText"></p>
-                </div>
-            </div>
-
-            <div id="dragColumns">
-                <div class="dragColumn" id="A">
-                    <div class="fill" id="2" ondragstart="drag(event)">
-                        <p id="fillText1"></p>
+            <div id="disappear">
+                <div id="leftInfo">
+                    <div id="leftColumn">
+                        <p id="four"></p>
                     </div>
-                </div>
-                <div class="dragColumn" id="B">
-                    <div class="fill" id="4" ondragstart="drag(event)">
-                        <p id="fillText3"></p>
+                    <div id="leftColumn2">
+                        <p id="titleGrey"></p>
                     </div>
-                </div>
-                <div class="dragColumn" id="C">
-                    <div class="fill" id="6" ondragstart="drag(event)">
-                        <p id="fillText4"></p>
-                    </div>
-                </div>
-                <div class="dragColumn" id="D">
-                    <div class="fill"  id="8" ondragstart="drag(event)">
-                        <p id="fillText2"></p>
+                    <div id="leftColumn3">
+                        <p id="five"></p>
                     </div>
                 </div>
 
+                <div id="lineColumns">
+                    <div id="lineColumn1"></div>
+                    <div id="lineColumn2"></div>
+                </div>
+                <div id="lineColumns2">
+                    <div id="lineColumn3"></div>
+                    <div id="lineColumn4"></div>
+                    <div id="lineColumn5"></div>
+                    <div id="lineColumn6"></div>
+                    <div id="lineColumn7"></div>
+                    <div id="lineColumn8"></div>
+                    <div id="lineColumn9"></div>
+                    <div id="lineColumn10"></div>
+                </div>
+                <div id="fillColumns">
+                    <div id="fillColumn1">
+                        <div class="empty" id="1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    </div>
+                    <div id="fillColumn2">
+                        <div class="empty" id="7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    </div>
+                    <div id="fillColumn3">
+                        <div class="empty" id="3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    </div>
+                    <div id="fillColumn4">
+                        <div class="empty" id="5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    </div>
+                </div>
+                <div id="textColumns">
+                    <div id="textColumn1">
+                        <p id="firstText"></p>
+                    </div>
+                    <div id="textColumn2">
+                        <p id="secondText"></p>
+                        <p id="secondText2"></p>
+                        <p id="secondText3"></p>
+                    </div>
+                    <div id="textColumn3">
+                        <p id="thirdText"></p>
+                    </div>
+                    <div id="textColumn4">
+                        <p id="fourthText"></p>
+                    </div>
+                </div>
+
+                <div id="dragColumns">
+                    <div class="dragColumn" id="A">
+                        <div class="fill" id="2" ondragstart="drag(event)">
+                            <i class="fa fa-plus-circle" aria-hidden="true" id="sign"></i>
+                            <p id="fillText1"></p>
+                        </div>
+                    </div>
+                    <div class="dragColumn" id="B">
+                        <div class="fill" id="4" ondragstart="drag(event)">
+                            <i class="fa fa-minus-circle" aria-hidden="true" id="sign2"></i>
+                            <p id="fillText3"></p>
+                        </div>
+                    </div>
+                    <div class="dragColumn" id="C">
+                        <div class="fill" id="6" ondragstart="drag(event)">
+                            <i class="fa fa-minus-circle" aria-hidden="true" id="sign3"></i>
+                            <p id="fillText4"></p>
+                        </div>
+                    </div>
+                    <div class="dragColumn" id="D">
+                        <div class="fill" id="8" ondragstart="drag(event)">
+                            <i class="fa fa-plus-circle" aria-hidden="true" id="sign4"></i>
+                            <p id="fillText2"></p>
+                        </div>
+                    </div>
+                    <i class="fa fa-chevron-circle-right" id="rightOn"></i>
+                </div>
             </div>
+            <div id="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+
+                    <div id="upper">
+                        <p id="prologue"></p>
+                        <div id="buttonColumn">
+                            <button id="trueAnswer">TRUE</button>
+                            <p id="or">OR</p>
+                            <button id="falseAnswer">FALSE</button>
+                        </div>
+                    </div>
+
+                    <div id="lower">
+                        <p id="vastaus"></p>
+                        <span class="close">
+                            <i class="fa fa-chevron-circle-right" id="forwardAnswer"></i>
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
             <i class="fa fa-chevron-circle-right" id="arrowButton"></i>
         </div>
 
@@ -126,7 +158,7 @@
                 </div>
             </div>
         </div>
-
+        <div id="progress"><p id="progressText">PROGRESS</p></div>
     </div>
 
 </body>
