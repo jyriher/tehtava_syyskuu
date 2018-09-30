@@ -17,11 +17,11 @@ let executeSecond = false;
 let executeThird = false;
 let executeFourth = false;
 const buttonColumn = document.querySelector('#buttonColumn');
-// const proxyosoite = 'https://cors-anywhere.herokuapp.com/';
+
 const rightOn = document.querySelector('#rightOn');
 const info2 = document.querySelector('#info2');
 const disappear = document.querySelector('#disappear');
-//const three = document.querySelector('#three');
+
 const sign = document.querySelector('#sign');
 const sign2 = document.querySelector('#sign2');
 const sign3 = document.querySelector('#sign3');
@@ -33,9 +33,9 @@ const allowDrop = (ev) => {
 }
 
 const drag = (ev) => {
-    // console.log(ev);
+   
     ev.dataTransfer.setData('text', ev.currentTarget.id);
-    // ev.currentTarget.style.background = 'blue';
+    
     taulukko.push(ev.target.parentNode);
 
 
@@ -43,7 +43,7 @@ const drag = (ev) => {
 
 const drop = (ev) => {
     ev.preventDefault();
-    //  console.log(ev.target.id);
+    
     let data = ev.dataTransfer.getData('text');
     ev.target.appendChild(document.getElementById(data));
     varasto.push(ev.target.id);
@@ -53,17 +53,10 @@ const drop = (ev) => {
 
 
 
-    // console.log(ev);
-
-
-    /* if(event.dataTransfer.dropEffect !== 'none'){
-         ev.target.appendChild(ev.target.parentNode);
-     } */
-
     if (ev.srcElement.childNodes['0'].id - 1 == ev.currentTarget.id) {
         ev.dataTransfer.dropEffect = 'move';
         modal.style.display = 'block';
-        //   alert('Just näin, nappiin meni!');
+        
         taulukko.length = 0;
 
 
@@ -126,22 +119,22 @@ const drop = (ev) => {
                         span.addEventListener('click', () => {
                             answerCount++;
                             if ((answerCount % 2) == 0 && answerCount < 6) {
-                                // modal.style.display = 'none';
+                                
                                 console.log('vastauslaskuri: ' + answerCount);
                                 span.style.display = 'none';
                                 buttonColumn.style.display = 'flex';
                                 vastaus.innerHTML = '';
-                                //  prologue.innerHTML = '';
+                                
 
 
                                 switch (answerCount) {
                                     case 2:
                                         prologue.innerHTML = result.allquestions.drag.truefalsequestions.question[1].content;
-                                        // console.log('2.kyssä');
+                                        
                                         break;
                                     case 4:
                                         prologue.innerHTML = result.allquestions.drag.truefalsequestions.question[2].content;
-                                        //     console.log('3.kyssä');
+                                        
                                         break;
                                     default:
                                         console.log('no can do')
@@ -149,8 +142,7 @@ const drop = (ev) => {
                                 }
 
                             } else {
-                                //  prologue.innerHTML = 'uusi kokeilu';
-                                //vastaus.innerHTML = '';
+                                
                                 vastaus.innerHTML = '';
                                 prologue.innerHTML = '';
                                 modal.style.display = 'none';
@@ -162,8 +154,6 @@ const drop = (ev) => {
                         });
 
 
-                        // console.log('ANSWERCOUNT: ' + answerCount);
-                        //answerCount = 0;
                         break;
                     case 3:
 
@@ -213,22 +203,22 @@ const drop = (ev) => {
                         span.addEventListener('click', () => {
                             answerCount2++;
                             if ((answerCount2 % 2) == 0 && answerCount2 < 6) {
-                                // modal.style.display = 'none';
+                              
                                 console.log('vastauslaskuri2: ' + answerCount2);
                                 span.style.display = 'none';
                                 buttonColumn.style.display = 'flex';
                                 vastaus.innerHTML = '';
-                                //  prologue.innerHTML = '';
+                                
 
 
                                 switch (answerCount2) {
                                     case 2:
                                         prologue.innerHTML = result.drag3.truefalsequestions.question[1].content;
-                                        //console.log('2.kyssä');
+                                        
                                         break;
                                     case 4:
                                         prologue.innerHTML = result.drag3.truefalsequestions.question[2].content;
-                                        //     console.log('3.kyssä');
+                                        
                                         break;
                                     default:
                                         console.log('no can do');
@@ -236,8 +226,7 @@ const drop = (ev) => {
                                 }
 
                             } else {
-                                //  prologue.innerHTML = 'uusi kokeilu';
-                                //vastaus.innerHTML = '';
+                                
                                 vastaus.innerHTML = '';
                                 prologue.innerHTML = '';
                                 modal.style.display = 'none';
@@ -249,8 +238,6 @@ const drop = (ev) => {
                         });
 
 
-                        // console.log('ANSWERCOUNT: ' + answerCount);
-                        //answerCount = 0;
                         break;
                     case 5:
 
@@ -300,22 +287,22 @@ const drop = (ev) => {
                         span.addEventListener('click', () => {
                             answerCount3++;
                             if ((answerCount3 % 2) == 0 && answerCount3 < 6) {
-                                // modal.style.display = 'none';
+                                
                                 console.log('vastauslaskuri3: ' + answerCount3);
                                 buttonColumn.style.display = 'flex';
                                 span.style.display = 'none';
                                 vastaus.innerHTML = '';
-                                //  prologue.innerHTML = '';
+                               
 
 
                                 switch (answerCount3) {
                                     case 2:
                                         prologue.innerHTML = result.drag4.truefalsequestions.question[1].content;
-                                        //console.log('2.kyssä');
+                                        
                                         break;
                                     case 4:
                                         prologue.innerHTML = result.drag4.truefalsequestions.question[2].content;
-                                        //     console.log('3.kyssä');
+                                        
                                         break;
                                     default:
                                         console.log('no can do');
@@ -323,8 +310,7 @@ const drop = (ev) => {
                                 }
 
                             } else {
-                                //  prologue.innerHTML = 'uusi kokeilu';
-                                //vastaus.innerHTML = '';
+                                
                                 vastaus.innerHTML = '';
                                 prologue.innerHTML = '';
                                 modal.style.display = 'none';
@@ -384,22 +370,22 @@ const drop = (ev) => {
                         span.addEventListener('click', () => {
                             answerCount4++;
                             if ((answerCount4 % 2) == 0 && answerCount4 < 6) {
-                                // modal.style.display = 'none';
+                               
                                 console.log('vastauslaskuri4: ' + answerCount4);
                                 buttonColumn.style.display = 'flex';
                                 span.style.display = 'none';
                                 vastaus.innerHTML = '';
-                                //  prologue.innerHTML = '';
+                                
 
 
                                 switch (answerCount4) {
                                     case 2:
                                         prologue.innerHTML = result.drag2.truefalsequestions.question[1].content;
-                                        //console.log('2.kyssä');
+                                        
                                         break;
                                     case 4:
                                         prologue.innerHTML = result.drag2.truefalsequestions.question[2].content;
-                                        //     console.log('3.kyssä');
+                                       
                                         break;
                                     default:
                                         console.log('no can do');
@@ -407,8 +393,7 @@ const drop = (ev) => {
                                 }
 
                             } else {
-                                //  prologue.innerHTML = 'uusi kokeilu';
-                                //vastaus.innerHTML = '';
+                               
                                 vastaus.innerHTML = '';
                                 prologue.innerHTML = '';
                                 modal.style.display = 'none';
@@ -424,13 +409,11 @@ const drop = (ev) => {
                 }
             });
     } else {
-        //   const back = ev.srcElement.childNodes[0];
-        // ev.dataTransfer.dropEffect = 'none';
+       
         console.log(ev.currentTarget.id);
         console.log(ev.srcElement.childNodes['0'].id - 1)
         taulukko[0].appendChild(ev.target.childNodes['0']);
-        //  alert('No eihän se ihan näin mee');
-        //  console.log(taulukko[0].childNodes)
+        
 
         const blink = (a) => {
             setTimeout(() => {
@@ -442,12 +425,9 @@ const drop = (ev) => {
             }, 100);
         }
         blink(taulukko[0].childNodes[2]);
-        // ev.currentTarget.setAttribute('draggable', true);
-     //   taulukko[0].childNodes[2].style.background = 'red';
+    
         taulukko.length = 0;
-        //  console.log(back);
-        // append back to the original parent            
-        // back.appendChild(ev.target);
+      
     }
 }
 
@@ -460,24 +440,19 @@ const dragEnd = (ev) => {
 
     sign.setAttribute('draggable', false);
 
-    // console.log(ev);
-
-    // console.log(varasto);
-    // console.log('LOOK: ' + (ev.target.id - 1));
 
     if (ev.dataTransfer.dropEffect == 'none') {
-        //    console.log(ev.target.parentNode);
+        
         ev.target.parentNode.appendChild(ev.target);
-        //   console.log('Palautettu vanhemmalle!');
+        
         ev.currentTarget.setAttribute('draggable', true);
         taulukko.length = 0;
-        //varasto.length = 0;
+        
     } else if (varasto[0] == ev.target.id - 1) {
-        // ev.currentTarget.setAttribute('draggable', false);
+        
         ev.currentTarget.setAttribute('draggable', false);
         ev.target.children['0'].setAttribute('draggable', false);
-        //   console.log(ev.target.children['0'])
-        //   console.log('SAMAT!');
+        
         undraggable.push(ev.target.id);
     } else if (undraggable.includes(ev.target.id)) {
         ev.currentTarget.setAttribute('draggable', false);
@@ -488,14 +463,14 @@ const dragEnd = (ev) => {
     if (undraggable.length == 4) {
         rightOn.style.display = 'block';
     }
-    //    console.log(taulukko);
+    
     varasto.length = 0;
-    //   console.log(undraggable);
+    
 }
 
 for (fill of fills) {
     fill.setAttribute('draggable', true);
-    // filler.addEventListener('ondragstart', drag);
+    
     fill.addEventListener('dragend', dragEnd);
     fill.addEventListener('dragstart', dragStart);
 }

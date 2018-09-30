@@ -78,12 +78,12 @@ arrowButton.addEventListener('click', () => {
     info2.style.display = 'none';
     arrowButton.style.display = 'none';
     three.style.display = 'none';
-    // four.style.width = '36%';
+    
     leftInfo.style.display = 'flex';
     leftColumn.style.display = 'block';
     leftColumn2.style.display = 'block';
     leftColumn3.style.display = 'block';
-    //   leftColumn2.style.background = 'blue';
+    
     info.style.width = '56em';
     lineColumns.style.display = 'flex';
     lineColumns2.style.display = 'flex';
@@ -109,7 +109,7 @@ arrowButton.addEventListener('click', () => {
             fillText3.innerHTML = result.drag3.header;
             fillText4.innerHTML = result.drag4.header;
             fillText2.innerHTML = result.drag2.header;
-            // console.log(result.instructions.help[0]);
+            
         });
 });
 
